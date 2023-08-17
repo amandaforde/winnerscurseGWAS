@@ -8,7 +8,7 @@ Scripts related to simulations are contained in `simulations/scripts` while scri
 
 ## Simulation study
 
-**sims_pipeline.R:** This script allows us to run the entire simulation study which evaluates and compares various winner's curse correction methods, from beginning to end. ***Note that seeds have been included in each script separately.*** 
+**sims_pipeline.R:** This script allows us to run the entire simulation study which evaluates and compares various Winner's Curse correction methods, from beginning to end. ***Note that seeds have been included in each script separately.*** 
 
 **useful_funs.R:** This script provides all functions required for simulations.
 
@@ -21,15 +21,15 @@ Scripts related to simulations are contained in `simulations/scripts` while scri
 
 ### Evaluating methods 
 
-**sims_LD.R:** This script evaluates and compares several winner's curse correction methods using simulated sets of summary statistics, in which a simple *correlation structure* has been imposed on independent blocks of 100 SNPs. The simulated data sets also correspond to a quantitative trait with a normal effect size distribution. At two significance thresholds, 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, this script compares the various methods using different evaluation metrics.
+**sims_LD.R:** This script evaluates and compares several Winner's Curse correction methods using simulated sets of summary statistics, in which a simple *correlation structure* has been imposed on independent blocks of 100 SNPs. The simulated data sets also correspond to a quantitative trait with a normal effect size distribution. At two significance thresholds, 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, this script compares the various methods using different evaluation metrics.
 
 - ***Output:*** norm_5e-8_100sim_LD_ave.csv, norm_5e-8_100sim_LD_all.csv, norm_5e-4_100sim_LD_ave.csv, norm_5e-4_100sim_LD_all.csv
 
-**sims_ind_1.R:** This script evaluates and compares several winner's curse correction methods using simulated sets of summary statistics, in which SNPs are *independent*.The simulated data sets also correspond to a quantitative trait with a normal effect size distribution. At two significance thresholds, 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, this script compares the various methods using different evaluation metrics.
+**sims_ind_1.R:** This script evaluates and compares several Winner's Curse correction methods using simulated sets of summary statistics, in which SNPs are *independent*.The simulated data sets also correspond to a quantitative trait with a normal effect size distribution. At two significance thresholds, 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, this script compares the various methods using different evaluation metrics.
 
 - ***Output:*** norm_5e-8_100sim_ave.csv, norm_5e-8_100sim_all.csv, norm_5e-4_100sim_ave.csv, norm_5e-4_100sim_all.csv
 
-**sims_ind_2.R:** This script evaluates and compares several winner's curse correction methods using simulated sets of summary statistics, in which SNPs are *independent*. The simulated data sets correspond to three different settings: a quantitative trait with bimodal effect size distribution, a quantitative trait with skewed effect size distribution, and a binary trait with normal effect size distribution. 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, this script compares the various methods using different evaluation metrics.
+**sims_ind_2.R:** This script evaluates and compares several Winner's Curse correction methods using simulated sets of summary statistics, in which SNPs are *independent*. The simulated data sets correspond to three different settings: a quantitative trait with bimodal effect size distribution, a quantitative trait with skewed effect size distribution, and a binary trait with normal effect size distribution. 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, this script compares the various methods using different evaluation metrics.
 
 - ***Output:*** bim_5e-8_100sim_ave.csv, bim_5e-8_100sim_all.csv, bim_5e-4_100sim_ave.csv, bim_5e-4_100sim_all.csv, skew_5e-8_100sim_ave.csv, skew_5e-8_100sim_all.csv, skew_5e-4_100sim_ave.csv, skew_5e-4_100sim_all.csv, bin_5e-8_100sim_ave.csv, bin_5e-8_100sim_all.csv, bin_5e-4_100sim_ave.csv, bin_5e-4_100sim_all.csv
 
@@ -139,7 +139,7 @@ The following code was run: `sbatch linkdis_bmiA.sh`
 
 #### Evaluating methods
 
-**winnerscurse_realdata.R:** This script uses 6 sets of GWAS summary statistics, two related to each trait, which were generated in the previous section. This script's primary purpose is to evaluate a number of winner's curse correction methods by comparing their performance at two significance thresholds, 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, for each data set, using both the estimated MSE among significant SNPs and the average bias over all significant SNPs. It also performs an initial exploration of the data sets by computing the number of significant SNPs at each thresholds as well as proportions that indicate the extent of winner's curse.
+**winnerscurse_realdata.R:** This script uses 6 sets of GWAS summary statistics, two related to each trait, which were generated in the previous section. This script's primary purpose is to evaluate a number of Winner's Curse correction methods by comparing their performance at two significance thresholds, 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, for each data set, using both the estimated MSE among significant SNPs and the average bias over all significant SNPs. It also performs an initial exploration of the data sets by computing the number of significant SNPs at each thresholds as well as proportions that indicate the extent of Winner's Curse.
 
 - ***Input:*** summary_data_bmi_1.txt, summary_data_bmi_2.txt, summary_data_T2D_1.txt, summary_data_T2D_2.txt, summary_data_height_1.txt, summary_data_height_2.txt
 - ***Output:*** realdata_Table1.txt, mse_5e_8.txt, mse_5e_4.txt, bias_5e_8_positive.txt, bias_5e_8_negative.txt, bias_5e_4_positive.txt, bias_5e_4_negative.txt
@@ -148,7 +148,7 @@ The following code was run: `sbatch linkdis_bmiA.sh`
 
 #### Evaluating methods using pruned data sets
 
-**realdata_pruned.R:** This script is very similar to the above script, 'winnerscurse_realdata.R'. However, in this script, pruned versions of the six real data sets are first obtained. Following this, the winner's curse correction methods are then evaluated at two significance thresholds, 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, for each pruned data set, using the estimated MSE among significant SNPs.
+**realdata_pruned.R:** This script is very similar to the above script, 'winnerscurse_realdata.R'. However, in this script, pruned versions of the six real data sets are first obtained. Following this, the Winner's Curse correction methods are then evaluated at two significance thresholds, 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, for each pruned data set, using the estimated MSE among significant SNPs.
 
 - ***Input:*** pruned_SNPs_bmi_1.txt, summary_data_bmi_1.txt, summary_data_bmi_2.txt, summary_data_T2D_1.txt, summary_data_T2D_2.txt, summary_data_height_1.txt, summary_data_height_2.txt
 - ***Output:*** pruned_mse_5e_8.txt, pruned_mse_5e_4.txt
@@ -157,7 +157,7 @@ The following code was run: `sbatch linkdis_bmiA.sh`
 
 #### Investigating number of independent signals required
 
-**ind_signals.R:** This script accompanies our attempt at determining the number of independent signals required to ensure appropriate performance of the winner's curse correction methods. Firstly, the estimated MSE is computed for the BMI data sets at thresholds 5 <span>&#215;</span> 10<sup>-10</sup>, 5 <span>&#215;</span> 10<sup>-12</sup> and 5 <span>&#215;</span> 10<sup>-14</sup>, and for the height data sets at thresholds 5 <span>&#215;</span> 10<sup>-32</sup>, 5 <span>&#215;</span> 10<sup>-34</sup> and 5 <span>&#215;</span> 10<sup>-36</sup>. These results are illustrated. Manhattan plots for each data set are also produced. 
+**ind_signals.R:** This script accompanies our attempt at determining the number of independent signals required to ensure appropriate performance of the Winner's Curse correction methods. Firstly, the estimated MSE is computed for the BMI data sets at thresholds 5 <span>&#215;</span> 10<sup>-10</sup>, 5 <span>&#215;</span> 10<sup>-12</sup> and 5 <span>&#215;</span> 10<sup>-14</sup>, and for the height data sets at thresholds 5 <span>&#215;</span> 10<sup>-32</sup>, 5 <span>&#215;</span> 10<sup>-34</sup> and 5 <span>&#215;</span> 10<sup>-36</sup>. These results are illustrated. Manhattan plots for each data set are also produced. 
 
 - ***Input:*** summary_data_bmi_1.txt, summary_data_bmi_2.txt, summary_data_height_1.txt, summary_data_height_2.txt
 - ***Output:*** S23_Fig.tiff, S24_Fig.tiff, S25_Fig.tiff, S26_Fig.tiff, S27_Fig.tiff, S28_Fig.tiff 
