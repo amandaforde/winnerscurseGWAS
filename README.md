@@ -4,12 +4,20 @@ This repository contains the scripts used to provide results and figures for the
 
 Scripts related to simulations are contained in `simulations/scripts` while scripts used for the empirical analysis are contained in `real_data/scripts`. 
 
+&nbsp;
+
 ## Simulation study
 
 **sims_pipeline.R:** This script allows us to run the entire simulation study which evaluates and compares various winner's curse correction methods, from beginning to end. ***Note that seeds have been included in each script separately.*** 
 
 **useful_funs.R:** This script provides all functions required for simulations.
 
+**nsig_prop_bias_LD.R:** This script performs a preliminary investigation of the simulated sets of summary statistics, in which a simple *correlation structure* has been imposed on independent blocks of 100 SNPs. The simulated data sets also correspond to a quantitative trait with a normal effect size distribution. At two significance thresholds, 5 <span>&#215;</span> 10<sup>-8</sup> and 5 <span>&#215;</span> 10<sup>-4</sup>, this script obtains the number of significant SNPs, the proportion of these SNPs for which their association estimate is more extreme than their true effect size, the proportion of these SNPs which are significantly overestimated and the mean square error (MSE) of significant SNPs for each simulated data set.
+
+- ***Output:*** nsig_prop_bias_5e_8_LD_all.csv, nsig_prop_bias_5e-8_LD.csv, nsig_prop_bias_5e_4_LD_all.csv, nsig_prop_bias_5e-4_LD.csv
+
+
+&nbsp;
 
 ### Evaluating methods 
 

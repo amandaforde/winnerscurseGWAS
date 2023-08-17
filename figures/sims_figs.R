@@ -10,6 +10,11 @@
 ## results obtained upon implementation of the methods using independent sets of
 ## SNPs.
 
+## Outputs:
+## 1. Fig1.tiff  
+## 2. S1_Fig.tiff - S15_Fig.tiff
+## 3. S29_Fig.tiff
+
 ## Load required packages:
 library(dplyr)
 library(ggplot2)
@@ -275,7 +280,6 @@ plotB <- ggplot(MSE_5e_8b,aes(x=method,y=bias_down,fill=method, color=method)) +
 figure <- plotA + plotB
 figure + plot_layout(guides = "collect") + plot_annotation(tag_levels = 'A') &
   theme(plot.tag = element_text(face = "bold"))
-
 
 ## Save as 'figures/S4_Fig.tiff' with dimensions 1200 x 700 pixels.
 

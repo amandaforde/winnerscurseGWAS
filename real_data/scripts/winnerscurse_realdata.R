@@ -11,6 +11,15 @@
 ## thresholds, 5e-8 and 5e-4, for each data set, using both the estimated MSE
 ## among significant SNPs and the average bias over all significant SNPs.
 
+## Outputs:
+## 1. realdata_Table1.txt (used to obtain Table 1)
+## 2. mse_5e_8.txt (used to obtain Table 2)
+## 3. mse_5e_4.txt (used to obtain S12 Table)
+## 4. bias_5e_8_positive.txt (used to obtain S10 Table)
+## 5. bias_5e_8_negative.txt (used to obtain S11 Table)
+## 6. bias_5e_4_positive.txt (used to obtain S13 Table)
+## 7. bias_5e_4_negative.txt (used to obtain S14 Table)
+
 ## Load required packages:
 library(winnerscurse)
 library(ggplot2)

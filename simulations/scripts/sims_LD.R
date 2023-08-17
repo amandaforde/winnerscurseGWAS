@@ -26,9 +26,9 @@
 ## 6. rel_mse - relative improvement in average RMSE for significant SNPs
 
 ## Outputs: 
-## 1. norm_5e-8_100sim_LD_ave.csv
+## 1. norm_5e-8_100sim_LD_ave.csv (used to obtain S2-S5 Tables)
 ## 2. norm_5e-8_100sim_LD_all.csv
-## 3. norm_5e-4_100sim_LD_ave.csv
+## 3. norm_5e-4_100sim_LD_ave.csv (used to obtain S6-S9 Tables)
 ## 4. norm_5e-4_100sim_LD_all.csv
 
 ################################################################################

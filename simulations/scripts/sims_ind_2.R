@@ -23,7 +23,7 @@
 ## 6. rel_mse - relative improvement in average MSE for significant SNPs
 
 ## Outputs: 
-## 1. bim_5e-8_100sim_ave.csv
+## 1. bim_5e-8_100sim_ave.csv 
 ## 2. bim_5e-8_100sim_all.csv
 ## 3. bim_5e-4_100sim_ave.csv
 ## 4. bim_5e-4_100sim_all.csv

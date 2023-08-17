@@ -3,6 +3,11 @@
 ## This script provides the code used to produce the figures in the manuscript
 ## concerning real data.
 
+## Outputs:
+## 1. Fig2.tiff  
+## 2. Fig3.tiff 
+## 3. S16_Fig.tiff - S22_Fig.tiff
+
 ## Load required packages:
 library(ggplot2)
 library(dplyr)

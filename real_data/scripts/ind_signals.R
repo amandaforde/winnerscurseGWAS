@@ -7,6 +7,14 @@
 ## thresholds 5e-32, 5e-34 and 5e-36. These results are illustrated. Manhattan
 ## plots for each data set are also produced. 
 
+## Outputs:
+## 1. S23_Fig.tiff
+## 2. S24_Fig.tiff
+## 3. S25_Fig.tiff
+## 4. S26_Fig.tiff
+## 5. S27_Fig.tiff
+## 6. S28_Fig.tiff 
+
 ## Load required packages:
 library(winnerscurse)
 library(ggplot2)

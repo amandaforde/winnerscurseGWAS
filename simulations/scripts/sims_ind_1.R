@@ -520,7 +520,7 @@ run_sim <- function(n_samples, h2, prop_effect, S,sim)
   return(c(flb_EB,mse_EB,rmse_EB,bias_EB_up,bias_EB_down,rel_mse_EB,flb_EB_df,mse_EB_df,rmse_EB_df,bias_EB_df_up,bias_EB_df_down,rel_mse_EB_df,flb_EB_scam,mse_EB_scam,rmse_EB_scam,bias_EB_scam_up,bias_EB_scam_down,rel_mse_EB_scam,flb_EB_gam_po,mse_EB_gam_po,rmse_EB_gam_po,bias_EB_gam_po_up,bias_EB_gam_po_down,rel_mse_EB_gam_po,flb_EB_gam_nb,mse_EB_gam_nb,rmse_EB_gam_nb,bias_EB_gam_nb_up,bias_EB_gam_nb_down,rel_mse_EB_gam_nb,flb_FIQT,mse_FIQT,rmse_FIQT,bias_FIQT_up,bias_FIQT_down,rel_mse_FIQT,flb_BR,mse_BR,rmse_BR,bias_BR_up,bias_BR_down,rel_mse_BR,flb_cl1,mse_cl1,rmse_cl1,bias_cl1_up,bias_cl1_down,rel_mse_cl1,flb_cl2,mse_cl2,rmse_cl2,bias_cl2_up,bias_cl2_down,rel_mse_cl2,flb_cl3,mse_cl3,rmse_cl3,bias_cl3_up,bias_cl3_down,rel_mse_cl3,flb_rep,mse_rep,rmse_rep,bias_rep_up,bias_rep_down,rel_mse_rep,flb_naive,mse_naive,rmse_naive,bias_naive_up,bias_naive_down,rel_mse_naive))
 }
 res <- mclapply(1:nrow(sim_params), function(i){
-  print(paste(round(i*100/nrow(sim_params), 2),"%"))
+  #print(paste(round(i*100/nrow(sim_params), 2),"%"))
   do.call(run_sim, args=as.list(sim_params[i,]))}, mc.cores=1)
 
 ################################################################################

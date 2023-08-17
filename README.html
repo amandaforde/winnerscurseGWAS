@@ -369,6 +369,7 @@ using real data sets for three different traits.</p>
 <p>Scripts related to simulations are contained in
 <code>simulations/scripts</code> while scripts used for the empirical
 analysis are contained in <code>real_data/scripts</code>.</p>
+<p> </p>
 <div id="simulation-study" class="section level2">
 <h2>Simulation study</h2>
 <p><strong>sims_pipeline.R:</strong> This script allows us to run the
@@ -377,6 +378,24 @@ curse correction methods, from beginning to end. <strong><em>Note that
 seeds have been included in each script separately.</em></strong></p>
 <p><strong>useful_funs.R:</strong> This script provides all functions
 required for simulations.</p>
+<p><strong>nsig_prop_bias_LD.R:</strong> This script performs a
+preliminary investigation of the simulated sets of summary statistics,
+in which a simple <em>correlation structure</em> has been imposed on
+independent blocks of 100 SNPs. The simulated data sets also correspond
+to a quantitative trait with a normal effect size distribution. At two
+significance thresholds, 5 <span>×</span> 10<sup>-8</sup> and 5
+<span>×</span> 10<sup>-4</sup>, this script obtains the number of
+significant SNPs, the proportion of these SNPs for which their
+association estimate is more extreme than their true effect size, the
+proportion of these SNPs which are significantly overestimated and the
+mean square error (MSE) of significant SNPs for each simulated data
+set.</p>
+<ul>
+<li><strong><em>Output:</em></strong> nsig_prop_bias_5e_8_LD_all.csv,
+nsig_prop_bias_5e-8_LD.csv, nsig_prop_bias_5e_4_LD_all.csv,
+nsig_prop_bias_5e-4_LD.csv</li>
+</ul>
+<p> </p>
 <div id="evaluating-methods" class="section level3">
 <h3>Evaluating methods</h3>
 <p><strong>sims_LD.R:</strong> This script evaluates and compares

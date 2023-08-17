@@ -6,6 +6,10 @@
 ## evaluated at two significance thresholds, 5e-8 and 5e-4, for each pruned data
 ## set, using the estimated MSE among significant SNPs.
 
+## Outputs:
+## 1. pruned_mse_5e_8.txt (used to obtain S15 Table)
+## 2. pruned_mse_5e_4.txt (used to obtain S16 Table)
+
 ## Load required packages:
 library(winnerscurse)
 library(ggplot2)

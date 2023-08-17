@@ -12,7 +12,7 @@
 
 ## Outputs: 
 ## 1. nsig_prop_bias_5e_8_LD_all.csv
-## 2. nsig_prop_bias_5e-8_LD.csv
+## 2. nsig_prop_bias_5e-8_LD.csv (used to obtain S1 Table)
 ## 3. nsig_prop_bias_5e_4_LD_all.csv
 ## 4. nsig_prop_bias_5e-4_LD.csv
 
