@@ -523,7 +523,7 @@ simulate_ss_bin <- function(H2,Pi,nid,sc){
 }
 
 ################################################################################
-# 8. mse_sig_improve_per() - Given the data frame obtained due to method
+# 18. mse_sig_improve_per() - Given the data frame obtained due to method
 # application, the true effect sizes and the significance threshold, the relative
 # improvement in average MSE for significant SNPs due to method application is
 # computed.
