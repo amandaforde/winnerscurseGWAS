@@ -11,7 +11,7 @@
 ## SNPs.
 
 ## Outputs:
-## 1. Fig1.tiff  
+## 1. Fig1.eps 
 ## 2. S1_Fig.tiff - S15_Fig.tiff
 ## 3. S29_Fig.tiff
 
@@ -34,6 +34,7 @@ col2 <- brewer.pal(11,"PRGn")
 ## imposed on the set of SNPs.
 
 MSE_5e_8 <- read.csv("simulations/results/norm_5e-8_100sim_LD_all.csv")
+MSE_5e_8 <- MSE_5e_8[MSE_5e_8$method!="naive",]
 MSE_5e_8 <- MSE_5e_8  %>% mutate(method = recode(method, BR = 'boot', cl1 = 'CL1', cl2 = 'CL2', cl3 = 'CL3', EB_df = "EB_df", EB_gam_nb = "EB_gam_nb", EB_gam_po = "EB_gam_po", EB_scam = "EB_scam"))
 MSE_5e_8$method <- factor(MSE_5e_8$method, levels=c("CL1", "CL2", "CL3", "EB", "EB_df", "EB_gam_nb", "EB_gam_po", "EB_scam", "boot", "FIQT"))
 MSE_5e_8a <- MSE_5e_8[which(MSE_5e_8$n_samples==30000),]
@@ -50,7 +51,7 @@ figure <- plotA + plotB
 figure + plot_layout(guides = "collect") + plot_annotation(tag_levels = 'A') &
   theme(plot.tag = element_text(face = "bold"))
 
-## Save as 'figures/Fig1.tiff' with dimensions 1200 x 700 pixels.
+## Save as 'figures/Fig1.eps' with dimensions 1200 x 700 pixels.
 
 ################################################################################
 
@@ -290,6 +291,7 @@ figure + plot_layout(guides = "collect") + plot_annotation(tag_levels = 'A') &
 ## imposed on the set of SNPs.
 
 MSE_5e_4 <- read.csv("simulations/results/norm_5e-4_100sim_LD_all.csv")
+MSE_5e_4 <- MSE_5e_4[MSE_5e_4$method!="naive",]
 MSE_5e_4 <- MSE_5e_4  %>% mutate(method = recode(method, BR = 'boot', cl1 = 'CL1', cl2 = 'CL2', cl3 = 'CL3'))
 MSE_5e_4$method <- factor(MSE_5e_4$method, levels=c("CL1", "CL2", "CL3", "EB", "EB_df", "EB_gam_nb", "EB_gam_po", "EB_scam", "boot", "FIQT"))
 
@@ -368,6 +370,7 @@ figure + plot_layout(guides = "collect") + plot_annotation(tag_levels = 'A') &
 ## independent SNPs and a normal effect size distribution.
 
 MSE_5e_8 <- read.csv("simulations/results/norm_5e-8_100sim_all.csv")
+MSE_5e_8 <- MSE_5e_8[MSE_5e_8$method!="naive",]
 MSE_5e_8 <- MSE_5e_8  %>% mutate(method = recode(method, BR = 'boot', cl1 = 'CL1', cl2 = 'CL2', cl3 = 'CL3'))
 MSE_5e_8$method <- factor(MSE_5e_8$method, levels=c("CL1", "CL2", "CL3", "EB", "EB_df", "EB_gam_nb", "EB_gam_po", "EB_scam", "boot", "FIQT", "rep"))
 
@@ -396,6 +399,7 @@ figure + plot_layout(guides = "collect") + plot_annotation(tag_levels = 'A') &
 ## independent SNPs and a normal effect size distribution.
 
 MSE_5e_4 <- read.csv("simulations/results/norm_5e-4_100sim_all.csv")
+MSE_5e_4 <- MSE_5e_4[MSE_5e_4$method!="naive",]
 MSE_5e_4 <- MSE_5e_4  %>% mutate(method = recode(method, BR = 'boot', cl1 = 'CL1', cl2 = 'CL2', cl3 = 'CL3'))
 MSE_5e_4$method <- factor(MSE_5e_4$method, levels=c("CL1", "CL2", "CL3", "EB", "EB_df", "EB_gam_nb", "EB_gam_po", "EB_scam", "boot", "FIQT", "rep"))
 

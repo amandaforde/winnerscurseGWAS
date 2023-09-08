@@ -4,8 +4,8 @@
 ## concerning real data.
 
 ## Outputs:
-## 1. Fig2.tiff  
-## 2. Fig3.tiff 
+## 1. Fig2.eps  
+## 2. Fig3.eps 
 ## 3. S16_Fig.tiff - S22_Fig.tiff
 
 ## Load required packages:
@@ -47,7 +47,7 @@ plot_1 <- ggplot(new_mse_5e_8,aes(x=MSE,y=Method,fill=Method)) + geom_bar(stat="
   xlab(expression(paste(italic("Estimated"), " MSE at ", 5%*%10^-8))) + theme_bw() + theme(text = element_text(size=12),legend.position = "none",panel.grid.major = element_blank(), panel.grid.minor = element_blank(), strip.text.y = element_text(angle = 0)) + geom_vline(data = new_mse_5e_8[new_mse_5e_8$Method=="naive",], aes(xintercept = MSE), linetype=2, size=0.5) + geom_vline(xintercept=0)
 
 plot_1
-## Save as 'figures/Fig2.tiff' with dimensions 800 x 1100 pixels.
+## Save as 'figures/Fig2.eps' with dimensions 800 x 1100 pixels.
 
 ################################################################################
 
@@ -63,7 +63,7 @@ plot_2 <- ggplot(new_mse_5e_4,aes(x=MSE,y=Method,fill=Method)) + geom_bar(stat="
   xlab(expression(paste(italic("Estimated"), " MSE at ", 5%*%10^-4))) + theme_bw() + theme(text = element_text(size=12),legend.position = "none",panel.grid.major = element_blank(), panel.grid.minor = element_blank(), strip.text.y = element_text(angle=0)) + geom_vline(data = new_mse_5e_4[new_mse_5e_4$Method=="naive",], aes(xintercept = MSE), linetype=2, size=0.5) + geom_vline(xintercept=0)
 
 plot_2
-## Save as 'figures/Fig3.tiff' with dimensions 800 x 1100 pixels.
+## Save as 'figures/Fig3.eps' with dimensions 800 x 1100 pixels.
 
 ################################################################################
 
